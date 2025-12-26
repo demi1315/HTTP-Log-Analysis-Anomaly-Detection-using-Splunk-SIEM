@@ -1,52 +1,45 @@
-# 🛡️ Detection & Monitoring Improvements – Splunk SIEM
+# 🛡️ Mitigation & Detection Improvement Recommendations – HTTP Logs
 
 ---
 
-## 🎯 Detection Engineering Enhancements
+## 🚩 Detection Engineering Enhancements
 
-To improve visibility and reduce blind spots, the following detection improvements are recommended:
-
-- 📊 Define normal request-rate baselines  
-- 🚩 Alert on abnormal request spikes  
-- 🔐 Monitor repeated authentication failures  
-- 🧭 Detect repeated access to sensitive endpoints  
-- 🤖 Flag suspicious or missing user-agent strings  
+✔ Define normal request-rate baselines  
+✔ Detect sustained HTTP error spikes  
+✔ Monitor high-frequency source behavior  
+✔ Flag abnormal request methods  
+✔ Correlate source IPs with error patterns  
 
 ---
 
-## 📥 Log Quality & Normalization
+## 🧱 Log Quality & Normalization
 
-Effective detection requires consistent data.
-
-Recommended actions:
-- Normalize HTTP fields across logs  
-- Ensure consistent timestamp formats  
-- Retain logs for sufficient investigation periods  
-- Protect log integrity from tampering  
+✔ Standardize HTTP log formats  
+✔ Ensure consistent timestamp handling  
+✔ Validate field extraction regularly  
+✔ Retain logs for investigations  
 
 ---
 
-## 🧠 SOC Monitoring Best Practices
+## 🔐 Preventive Controls (Contextual)
 
-- Build dashboards for traffic trends  
-- Use time-based correlation  
-- Track recurring anomalies  
-- Tune alerts to reduce noise  
-- Periodically review detection effectiveness  
-
----
-
-## 🛡️ Preventive Controls (Beyond SIEM)
-
-While SIEM focuses on detection, prevention strengthens outcomes:
-
-- Implement rate limiting  
-- Deploy Web Application Firewalls (WAF)  
-- Enforce authentication protections  
-- Monitor application error behavior  
+While this project focuses on detection, additional preventive measures may include:
+- Rate limiting  
+- Web Application Firewalls (WAF)  
+- Authentication hardening  
+- Input validation  
 
 ---
 
-## ✅ Summary
+## 🧠 SOC Operational Practices
 
-Detection effectiveness improves when **behavior is understood, thresholds are defined, and alerts are contextualized**. SIEM success depends as much on tuning as on tooling.
+✔ Regular SPL query tuning  
+✔ Periodic review of traffic trends  
+✔ Noise reduction through thresholds  
+✔ Documentation of detection logic  
+
+---
+
+## 📌 Summary
+
+Effective HTTP log monitoring depends on **clean data, structured analysis, and contextual interpretation**, not tool output alone.
