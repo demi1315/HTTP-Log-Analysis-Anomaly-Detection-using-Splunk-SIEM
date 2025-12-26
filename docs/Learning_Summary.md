@@ -1,65 +1,47 @@
-# 📘 Learning Summary – HTTP Log Analysis & Anomaly Detection
+# 📘 Learning Summary – HTTP Log Analysis & Anomaly Detection (Splunk)
 
 ---
 
 ## 🧠 Technical Skills Strengthened
 
-This project strengthened practical skills in:
-
-- HTTP log interpretation  
-- Splunk search and analysis  
-- Anomaly detection logic  
-- Traffic pattern analysis  
-- Security event correlation  
-- Documentation and reporting  
+✔ Manual HTTP log ingestion in Splunk  
+✔ Source type and index configuration  
+✔ Regex-based field extraction  
+✔ SPL-based traffic analysis  
+✔ Error and anomaly identification  
+✔ Suspicious source investigation  
 
 ---
 
-## 🧩 SOC Concepts Reinforced
+## 🧩 Security & SOC Concepts Reinforced
 
-Key SOC principles reinforced include:
-
-- Detection over prevention  
-- Baseline-driven analysis  
-- Signal vs noise evaluation  
-- Context-aware alerting  
-- Analyst judgment importance  
-
----
-
-## 🔍 Analyst Mindset Development
-
-This project improved the ability to:
-
-- Interpret behavior, not just alerts  
-- Ask “why” behind anomalies  
-- Correlate multiple weak signals  
-- Prioritize findings logically  
-- Communicate observations clearly  
+✔ Detection through log analysis  
+✔ Importance of baselining normal behavior  
+✔ Signal vs noise evaluation  
+✔ Analyst-driven investigation workflows  
+✔ Value of structured log parsing  
 
 ---
 
 ## 💼 Professional Relevance
 
-Skills practiced align directly with:
-
+This project aligns directly with responsibilities found in:
 - SOC Analyst roles  
+- SIEM monitoring teams  
 - Blue Team operations  
-- Security monitoring teams  
-- Detection engineering fundamentals  
+- Incident detection and triage workflows  
 
 ---
 
 ## 🔑 Key Takeaways
 
-- Logs are meaningless without context  
-- Baselines reduce false positives  
-- Detection is an evolving process  
-- SIEM effectiveness depends on tuning  
-- Clear documentation improves response quality  
+✔ Raw logs require normalization to be useful  
+✔ HTTP error patterns are valuable detection signals  
+✔ SPL enables deep investigative analysis  
+✔ Analyst interpretation is critical for accuracy  
 
 ---
 
 ## 🧾 Final Reflection
 
-This project helped bridge the gap between **tool usage and analyst thinking**, reinforcing how SOC teams transform raw telemetry into security insight.
+This project strengthened my ability to convert raw web telemetry into **actionable security insights**, following realistic SOC-style investigation and documentation practices.
