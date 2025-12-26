@@ -1,23 +1,22 @@
 # 🔎 HTTP Log Analysis & Anomaly Detection using Splunk SIEM
 
-This project demonstrates a **Security Operations (SOC)-style analysis of HTTP server logs using Splunk SIEM**, focused on identifying abnormal behavior, suspicious patterns, and potential security incidents.
+This repository documents a **SOC-style HTTP log analysis project** using **Splunk SIEM**, focused on ingesting, parsing, and analyzing web server logs to identify **abnormal behavior and security-relevant patterns**.
 
-The objective of this project is to simulate how a SOC analyst ingests logs, builds searches, detects anomalies, and interprets security-relevant events from web traffic.
+The project emphasizes **manual log onboarding, field extraction, and analyst-driven investigation**, rather than real-time alerting or automated detection.
 
 ---
 
 ## 🎯 Project Objective
 
-The primary goal of this project is to:
+The objective of this project was to:
 
-- Analyze HTTP server logs using Splunk SIEM  
-- Identify anomalous or suspicious request patterns  
-- Detect potential attack indicators  
-- Understand web traffic behavior  
-- Practice log-driven investigation workflows  
-- Strengthen SOC-level monitoring and analysis skills  
-
-This project focuses on **detection and analysis**, not exploitation.
+- Ingest sample HTTP access logs into Splunk  
+- Configure appropriate source types and indexing  
+- Perform **manual field extraction using regex**
+- Analyze web traffic patterns using **SPL queries**
+- Identify anomalies such as abnormal errors and request behavior
+- Investigate suspicious source activity from HTTP logs
+- Practice SOC-aligned log analysis workflows  
 
 ---
 
@@ -26,133 +25,45 @@ This project focuses on **detection and analysis**, not exploitation.
 | Component | Description |
 |--------|-------------|
 | SIEM Platform | Splunk Enterprise |
-| Log Source | HTTP access logs |
-| Data Type | Web traffic / application logs |
-| Analysis Type | Detection & anomaly analysis |
-| Use Case | SOC monitoring & investigation |
+| Log Type | HTTP Access Logs |
+| Ingestion Method | Manual file upload |
+| Parsing Method | Regex-based field extraction |
+| Analysis Method | SPL-based searches |
+| Scope | Detection & analysis (no alerting) |
 
 ---
 
-## 📂 Data Ingestion Overview
+## 🧭 SOC Workflow Demonstrated
 
-HTTP log files were ingested into Splunk using file-based ingestion.  
-Once indexed, logs were parsed and analyzed to extract meaningful security signals.
-
-### Key Fields Analyzed
-- Client IP address  
-- Request method  
-- Requested URI  
-- HTTP response code  
-- User-Agent  
-- Timestamp  
-- Request frequency  
+1️⃣ Log ingestion and validation  
+2️⃣ Source type and index handling  
+3️⃣ Field extraction and normalization  
+4️⃣ Baseline traffic analysis  
+5️⃣ Anomaly identification  
+6️⃣ Suspicious source investigation  
+7️⃣ Analyst interpretation  
 
 ---
 
-## 🧭 Analysis Workflow
+## 🔍 Core Analysis Use Cases
 
-The investigation followed a structured SOC-style workflow:
-
-### 1. Log Ingestion & Verification
-- Uploaded HTTP access logs into Splunk  
-- Verified indexing and timestamp parsing  
-- Ensured searchable fields were extracted  
-
-### 2. Baseline Behavior Analysis
-- Observed normal request patterns  
-- Identified common endpoints  
-- Studied HTTP response distributions  
-- Analyzed request frequency trends  
-
-### 3. Anomaly Detection
-- Detected unusually high request rates  
-- Identified abnormal HTTP methods  
-- Flagged suspicious status codes  
-- Observed irregular user-agent strings  
-- Detected repeated failed requests  
-
-### 4. Threat-Oriented Analysis
-- Potential brute-force indicators  
-- Scanning behavior patterns  
-- Enumeration-like activity  
-- Error-based probing attempts  
-
-### 5. Investigation & Interpretation
-- Correlated events over time  
-- Identified suspicious IP behavior  
-- Assessed severity and impact  
-- Classified findings logically  
+- HTTP method distribution analysis  
+- Status code frequency and error patterns  
+- Time-based anomaly observation  
+- High-frequency source identification  
+- Endpoint and resource access concentration  
 
 ---
 
-## 🔍 Types of Anomalies Analyzed
+## ⚠️ Ethical & Usage Notice
 
-### Abnormal Request Volume
-- Sudden spikes in request count  
-- Repeated access from single IPs  
-- Traffic bursts inconsistent with baseline  
-
-### Suspicious HTTP Status Codes
-- High frequency of 4xx errors  
-- Repeated 401 / 403 responses  
-- Server-side error patterns (5xx)  
-
-### Malicious Request Patterns
-- Repeated probing of endpoints  
-- Suspicious URL structures  
-- Potential scanning behavior  
-- Enumeration-style access  
-
-### User-Agent Anomalies
-- Missing or malformed user-agent strings  
-- Non-browser identifiers  
-- Repeated automated signatures  
+- All log data is sample or lab-generated  
+- No live systems were monitored  
+- No exploitation or unauthorized access occurred  
+- Project is intended for **defensive learning only**  
 
 ---
 
-## 🛠️ Tools & Technologies Used
+📌 *This repository is part of my cybersecurity portfolio and demonstrates hands-on experience with SIEM-based HTTP log ingestion, parsing, and anomaly analysis.*
 
-- **Splunk Enterprise**
-- SPL (Search Processing Language)
-- HTTP access logs
-- Linux environment
-- SOC-style log analysis methodology
-
----
-
-## 📊 Detection Use Cases Implemented
-
-- High-frequency request detection  
-- Failed request anomaly detection  
-- Suspicious endpoint access  
-- Traffic spike identification  
-- Abnormal client behavior detection  
-- Potential scanning activity recognition  
-
----
-
-## ⚠️ Ethical Disclaimer
-
-This project was conducted strictly for **educational and defensive purposes** using sample or lab-generated log data.
-
-- No live systems were attacked  
-- No unauthorized access occurred  
-- No real user data was involved  
-
----
-
-## 📘 Why This Project Matters
-
-This project demonstrates:
-
-- SOC-level log analysis skills  
-- Ability to interpret HTTP logs  
-- Understanding of attacker behavior patterns  
-- Experience with Splunk searches  
-- Detection-driven security thinking  
-- Professional documentation practices  
-
----
-
-📌 *This repository is part of my cybersecurity portfolio and demonstrates hands-on experience with SIEM-based log analysis and anomaly detection.*
 
