@@ -1,78 +1,63 @@
-# ⚠️ Detection Gaps & Security Blind Spots – HTTP Log Analysis
+# ⚠️ Misconfiguration & Detection Gap Analysis – HTTP Log Monitoring
 
 ---
 
 ## 🔍 Overview
 
-This document analyzes **visibility gaps and detection weaknesses** identified during HTTP log analysis.  
-The focus is not on missing data, but on **what could go unnoticed without proper detection logic**.
+This document analyzes **visibility gaps and detection weaknesses** observed during HTTP log analysis. The focus is not on missing data, but on what types of malicious or abnormal behavior could remain undetected without proper analysis and monitoring logic.
 
 ---
 
-## 🚫 Absence of Defined Traffic Baselines
+## 🚫 Lack of Defined Traffic Baselines
 
-Without an established baseline, abnormal behavior blends into normal traffic.
+Without established baselines for normal HTTP traffic, abnormal behavior is difficult to identify confidently.
 
-**Why this matters:**
-- Anomalies cannot be measured accurately  
-- SOC teams rely on intuition instead of data  
-- Attackers can operate under the radar  
-
----
-
-## 🚨 Lack of Behavioral Detection Rules
-
-Repeated suspicious behaviors were observable but not automatically flagged.
-
-Examples include:
-- Excessive requests from a single IP  
-- Repeated access to sensitive endpoints  
-- High error response frequency  
-
-**Impact:**  
-Reconnaissance and brute-force activity may go undetected.
+**Impact**
+- Increased false negatives  
+- Difficulty distinguishing abuse from legitimate spikes  
+- Analyst reliance on intuition  
 
 ---
 
-## 🧱 No Rate-Limiting Indicators
+## 🚨 Absence of Behavioral Detection Logic
 
-Traffic patterns suggested automation, but no thresholds were in place to highlight it.
+Repeated error patterns and high-frequency requests were observable but not automatically flagged.
 
-**Impact:**  
-- Credential abuse may continue unchecked  
-- Application resources may be stressed  
+**Impact**
+- Reconnaissance activity may go unnoticed  
+- Brute-force attempts may blend into normal traffic  
 
 ---
 
-## 👁️ Limited User Behavior Correlation
+## 🧱 Limited Correlation Between Fields
 
-Analysis showed limited correlation between:
-- Source IP  
-- Request patterns  
-- User-agent characteristics  
+Analysis required manual correlation between:
+- Source IPs  
+- Request methods  
+- Status codes  
 
-**Impact:**  
-Difficult to distinguish malicious automation from legitimate users.
+**Impact**
+- Slower investigations  
+- Increased analyst workload  
 
 ---
 
 ## 🔕 Missing Alert Context
 
-Even when suspicious behavior exists, lack of alerting context prevents prioritization.
+Even when anomalies exist, lack of alerting logic prevents prioritization.
 
-**Impact:**  
-- Analyst fatigue  
+**Impact**
 - Delayed response  
-- Missed early indicators  
+- Reduced SOC efficiency  
 
 ---
 
 ## 🧠 Root Cause Summary
 
-Most gaps stemmed from:
-- Lack of detection engineering  
+Most gaps stem from:
+- Absence of detection engineering  
 - No defined thresholds  
+- Lack of baseline awareness  
 - Overreliance on manual searches  
-- Absence of behavioral correlation  
 
-These are **common SIEM maturity issues**, even in real organizations.
+These gaps are common in early-stage or immature SIEM deployments.
